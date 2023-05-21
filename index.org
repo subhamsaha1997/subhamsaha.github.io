@@ -2,12 +2,12 @@
 #+EMAIL: subhamsaha0216@gmail.com
 
 ** EDUCATION
-*** Indian Institute of Space Science and Technology, Trivandrum, India \hfill 2016-2020
+*** Indian Institute of Space Science and Technology, Trivandrum, India 2016-2020
 - Bachelor of Technology, Electronics and Communication Engineering
 - CGPA: *9.62/10*
 
 ** PROFESSIONAL EXPERIENCE
-*** U. R. Rao Satellite Center, Indian Space Research Organization \hfill 2021-Present
+*** U. R. Rao Satellite Center, Indian Space Research Organization 2021-Present
 **** Embedded Software Developer, Human Space Program
 (Ada, GDB, Python, Gnuplot, GNU Make, Git/Gitlab)
 
@@ -26,27 +26,27 @@
 - Developed codebase for command reception and loopback in target environment.
 
 ** RESEARCH EXPERIENCE
-*** Indian Institute of Science, Bangalore \hfill 2020
+*** Indian Institute of Science, Bangalore 2020
 Mentor: [[https://www.linkedin.com/in/chandra-murthy-6a67221/][Chandra R. Murthy]], [[https://www.linkedin.com/in/vineeth-b-s-56117274/][Vineeth B. S.]]
 - Characterized *average age of information* (AAoI) in massive machine type communication for frame-based *irregular repetition slotted aloha* (IRSA) as function of users, frame duration, and repetition distribution for two cases of transmission: *beginning of the frame* and *just-in-time*.
 - Proposed and characterized a novel *early packet recovery* method using successive interference cancellation in every slot of IRSA. The early recovery method achieves AAoI *54% less* than that of slotted ALOHA and *53% less* than CRDSA.
 - Optimized normalized channel traffic and repetition distribution to *minimize AAoI* in asymptotic scenario and formulated practical method to reduce AAoI in non-asymptotic case which performs as closely as *12%* of the asymptotic value.
 - Derived analytical expression and characterized *average age of incorrect information* for *remote estimation of a stochastic piecewise linear signal* over unreliable channel.
 
-*** Jet Propulsion Lab, Pasadena \hfill 2019
+*** Jet Propulsion Lab, Pasadena  2019
 Mentor: [[https://www.linkedin.com/in/clayton-okino-91709a2b/][Clayton Okino]]
 - Developed a *spectrum analysis suite* in Qt to inspect wireless environment using Universal Software Radio Peripheral, GNU Radio, and UHD C/C++ API supported through SWIG.
 - Incorporated visualization of spatial energy distribution, and location-tagging of the acquired samples.
 
-*** Indian Institute of Space Science and Technology, Trivandrum \hfill 2017-2018
+*** Indian Institute of Space Science and Technology, Trivandrum  2017-2018
 Mentor: [[https://www.linkedin.com/in/anoop-c-s-52b84122/][Anoop C. S.]]
 - Designed a novel *microcontroller-based direct digital interface* circuit for *Giant Magneto-Resistance sensors* to measure magnetic field strength using discharge times of a capacitor in three different conversion modes to compensate pin resistance.
 - Carried out *simulation and emulation studies* of the scheme to find worst case *non-linearity of 0.33% in simulation model and 0.35% in emulation model*.
 
 ** AWARDS AND HONORS
-- *Department of Space scholarship* \hfill 2016
-- Institute Gold Medal for *Best Academic Performer in Undergraduate* \hfill 2020
-- *Ranked 31 among 45833* candidates in Graduate Aptitude Test (GATE) in EC \hfill 2023
+- *Department of Space scholarship* 2016
+- Institute Gold Medal for *Best Academic Performer in Undergraduate* 2020
+- *Ranked 31 among 45833* candidates in Graduate Aptitude Test (GATE) in EC 2023
 
 ** PUBLICATIONS
 *** Journal Articles
