@@ -1,379 +1,124 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
-<!-- 2023-05-21 Sun 13:24 -->
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>&lrm;</title>
-<meta name="author" content="Subham Saha" />
-<meta name="generator" content="Org Mode" />
-<style>
-  #content { max-width: 60em; margin: auto; }
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #e6e6e6;
-    border-radius: 3px;
-    background-color: #f2f2f2;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: auto;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    top: -8px;
-    right: 12px;
-    padding: 3px;
-    color: #555;
-    background-color: #f2f2f299;
-  }
-  pre.src:hover:before { display: inline; margin-top: 14px;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-authinfo::before { content: 'Authinfo'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
-       in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
-     ob-shell.el: ob-shell is the only babel language using a lambda to put
-     the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
-
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .equation-container {
-    display: table;
-    text-align: center;
-    width: 100%;
-  }
-  .equation {
-    vertical-align: middle;
-  }
-  .equation-label {
-    display: table-cell;
-    text-align: right;
-    vertical-align: middle;
-  }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { }
-</style>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Subham Saha</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="style.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
 </head>
 <body>
-<div id="content" class="content">
-<div id="table-of-contents" role="doc-toc">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents" role="doc-toc">
+<header id="title-block-header">
+<h1 class="title">Subham Saha</h1>
+</header>
+<h1 id="about">About</h1>
+<p><img src="./profile.jpg" class="profile" /> Subham stumbled upon his
+interest in ECE serendipitously while studying Aerospace Engineering,
+realizing that the world of signals and communications held a greater
+fascination for him. He earned his B.Tech in ECE from the Indian
+Institute of Space Science and Technology. Currently, his research
+interests include wireless communication and networking systems.
+Subham’s extensive prior experience includes designing multiple access
+schemes for massive MIMO communications applications and software
+development for embedded systems. Beyond academia, he describes himself
+as a fun-loving ambivert, occasionally indulging in playing the ukulele,
+singing, and socializing. He also plays badminton and table tennis at a
+level slightly beyond beginner. His love for the outdoors extends to
+treks, hikes, and activities like running and swimming.</p>
+<h1 id="education">Education</h1>
 <ul>
-<li><a href="#org5fa7f38">1. EDUCATION</a>
-<ul>
-<li><a href="#orge44af8a">1.1. Indian Institute of Space Science and Technology, Trivandrum, India 2016-2020</a></li>
+<li>B.Tech, Electronics and Communication Engineering, Indian Institute
+of Space Science and Technology, 2020.</li>
 </ul>
-</li>
-<li><a href="#org574b766">2. PROFESSIONAL EXPERIENCE</a>
-<ul>
-<li><a href="#orga8aac27">2.1. U. R. Rao Satellite Center, Indian Space Research Organization 2021-Present</a>
-<ul>
-<li><a href="#org227c657">2.1.1. Embedded Software Developer, Human Space Program</a></li>
-<li><a href="#orged2678a">2.1.2. Project Lead for RTOS</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#orgdd40e0e">3. RESEARCH EXPERIENCE</a>
-<ul>
-<li><a href="#org126becc">3.1. Indian Institute of Science, Bangalore 2020</a></li>
-<li><a href="#org5de4530">3.2. Jet Propulsion Lab, Pasadena  2019</a></li>
-<li><a href="#org841b503">3.3. Indian Institute of Space Science and Technology, Trivandrum  2017-2018</a></li>
-</ul>
-</li>
-<li><a href="#orgd35e361">4. AWARDS AND HONORS</a></li>
-<li><a href="#org92b9cdf">5. PUBLICATIONS</a>
-<ul>
-<li><a href="#org4e4689e">5.1. Journal Articles</a></li>
-<li><a href="#org2c0139a">5.2. Conference Proceedings</a></li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-org5fa7f38" class="outline-2">
-<h2 id="org5fa7f38"><span class="section-number-2">1.</span> EDUCATION</h2>
-<div class="outline-text-2" id="text-1">
-</div>
-<div id="outline-container-orge44af8a" class="outline-3">
-<h3 id="orge44af8a"><span class="section-number-3">1.1.</span> Indian Institute of Space Science and Technology, Trivandrum, India 2016-2020</h3>
-<div class="outline-text-3" id="text-1-1">
-<ul class="org-ul">
-<li>Bachelor of Technology, Electronics and Communication Engineering</li>
-<li>CGPA: <b>9.62/10</b></li>
-</ul>
-</div>
-</div>
-</div>
-
-<div id="outline-container-org574b766" class="outline-2">
-<h2 id="org574b766"><span class="section-number-2">2.</span> PROFESSIONAL EXPERIENCE</h2>
-<div class="outline-text-2" id="text-2">
-</div>
-<div id="outline-container-orga8aac27" class="outline-3">
-<h3 id="orga8aac27"><span class="section-number-3">2.1.</span> U. R. Rao Satellite Center, Indian Space Research Organization 2021-Present</h3>
-<div class="outline-text-3" id="text-2-1">
-</div>
-<div id="outline-container-org227c657" class="outline-4">
-<h4 id="org227c657"><span class="section-number-4">2.1.1.</span> Embedded Software Developer, Human Space Program</h4>
-<div class="outline-text-4" id="text-2-1-1">
-<p>
-(Ada, GDB, Python, Gnuplot, GNU Make, Git/Gitlab)
-</p>
-
-<ul class="org-ul">
-<li>Implemented CCSDS space packet protocol to amplify single uplink capability <b>upto 8 times</b> in HX1750 based system.</li>
-<li>Developed a telemetry system for data acquisition from diverse interfaces (e.g. analog sensor, Mil1553B etc.), uniform parameter identifier assignment, and formatting data into CCSDS compliant frame structure for 8Kbps stream.</li>
-<li>Designed critical event monitoring system for failure detection, and fixed-priority command execution for recovery. Successfully <b>unit-tested</b> using <b>GNAT Debugger GDB</b> and integration-tested the failure mitigation scheme with time constraints under simulated stimuli.</li>
-<li>Conceptualized a simple EEPROM based command storage system for power on initialization which <b>reduced</b> the number of uplink required to program by <b>50%</b>.</li>
-<li>Established <b>version control</b>, and <b>CI/CD pipelines</b> using Gitlab for compiling and maintaining the code base.</li>
-<li>Developed scripts to parse Mil1553B bus-monitor logs into annotated database to automate testing, and timing verification.</li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-orged2678a" class="outline-4">
-<h4 id="orged2678a"><span class="section-number-4">2.1.2.</span> Project Lead for RTOS</h4>
-<div class="outline-text-4" id="text-2-1-2">
-<p>
-(C, GDB, FreeRTOS, GNU Make, Qemu, Git/Gitlab)
-</p>
-
-<ul class="org-ul">
-<li>Self-taught <b>FreeRTOS</b> kernel internals to implement <b>operating system</b> based task management to improve processor cycle utilization.</li>
-<li>Established remote debug facilities in emulated (QEMU) and target environment using <b>GNU Debugger</b>.</li>
-<li>Developed codebase for command reception and loopback in target environment.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-
-<div id="outline-container-orgdd40e0e" class="outline-2">
-<h2 id="orgdd40e0e"><span class="section-number-2">3.</span> RESEARCH EXPERIENCE</h2>
-<div class="outline-text-2" id="text-3">
-</div>
-<div id="outline-container-org126becc" class="outline-3">
-<h3 id="org126becc"><span class="section-number-3">3.1.</span> Indian Institute of Science, Bangalore 2020</h3>
-<div class="outline-text-3" id="text-3-1">
-<p>
-Mentor: <a href="https://www.linkedin.com/in/chandra-murthy-6a67221/">Chandra R. Murthy</a>, <a href="https://www.linkedin.com/in/vineeth-b-s-56117274/">Vineeth B. S.</a>
-</p>
-<ul class="org-ul">
-<li>Characterized <b>average age of information</b> (AAoI) in massive machine type communication for frame-based <b>irregular repetition slotted aloha</b> (IRSA) as function of users, frame duration, and repetition distribution for two cases of transmission: <b>beginning of the frame</b> and <b>just-in-time</b>.</li>
-<li>Proposed and characterized a novel <b>early packet recovery</b> method using successive interference cancellation in every slot of IRSA. The early recovery method achieves AAoI <b>54% less</b> than that of slotted ALOHA and <b>53% less</b> than CRDSA.</li>
-<li>Optimized normalized channel traffic and repetition distribution to <b>minimize AAoI</b> in asymptotic scenario and formulated practical method to reduce AAoI in non-asymptotic case which performs as closely as <b>12%</b> of the asymptotic value.</li>
-<li>Derived analytical expression and characterized <b>average age of incorrect information</b> for <b>remote estimation of a stochastic piecewise linear signal</b> over unreliable channel.</li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-org5de4530" class="outline-3">
-<h3 id="org5de4530"><span class="section-number-3">3.2.</span> Jet Propulsion Lab, Pasadena  2019</h3>
-<div class="outline-text-3" id="text-3-2">
-<p>
-Mentor: <a href="https://www.linkedin.com/in/clayton-okino-91709a2b/">Clayton Okino</a>
-</p>
-<ul class="org-ul">
-<li>Developed a <b>spectrum analysis suite</b> in Qt to inspect wireless environment using Universal Software Radio Peripheral, GNU Radio, and UHD C/C++ API supported through SWIG.</li>
-<li>Incorporated visualization of spatial energy distribution, and location-tagging of the acquired samples.</li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-org841b503" class="outline-3">
-<h3 id="org841b503"><span class="section-number-3">3.3.</span> Indian Institute of Space Science and Technology, Trivandrum  2017-2018</h3>
-<div class="outline-text-3" id="text-3-3">
-<p>
-Mentor: <a href="https://www.linkedin.com/in/anoop-c-s-52b84122/">Anoop C. S.</a>
-</p>
-<ul class="org-ul">
-<li>Designed a novel <b>microcontroller-based direct digital interface</b> circuit for <b>Giant Magneto-Resistance sensors</b> to measure magnetic field strength using discharge times of a capacitor in three different conversion modes to compensate pin resistance.</li>
-<li>Carried out <b>simulation and emulation studies</b> of the scheme to find worst case <b>non-linearity of 0.33% in simulation model and 0.35% in emulation model</b>.</li>
-</ul>
-</div>
-</div>
-</div>
-
-<div id="outline-container-orgd35e361" class="outline-2">
-<h2 id="orgd35e361"><span class="section-number-2">4.</span> AWARDS AND HONORS</h2>
-<div class="outline-text-2" id="text-4">
-<ul class="org-ul">
-<li><b>Department of Space scholarship</b> 2016</li>
-<li>Institute Gold Medal for <b>Best Academic Performer in Undergraduate</b> 2020</li>
-<li><b>Ranked 31 among 45833</b> candidates in Graduate Aptitude Test (GATE) in EC 2023</li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-org92b9cdf" class="outline-2">
-<h2 id="org92b9cdf"><span class="section-number-2">5.</span> PUBLICATIONS</h2>
-<div class="outline-text-2" id="text-5">
-</div>
-<div id="outline-container-org4e4689e" class="outline-3">
-<h3 id="org4e4689e"><span class="section-number-3">5.1.</span> Journal Articles</h3>
-<div class="outline-text-3" id="text-5-1">
-<ol class="org-ol">
-<li>S. Saha, V. B. Sukumaran and C. R. Murthy, &ldquo;On the Minimum Average Age of Information in IRSA for Grant-Free mMTC,&rdquo; in IEEE JSAC, May 2021, doi: 10.1109/JSAC.2021.3065065.</li>
-<li>S. Saha, H. S. Makkar, V. B. Sukumaran and C. R. Murthy, &ldquo;On the Relationship Between Mean Absolute Error and Age of Incorrect Information in the Estimation of a Piecewise Linear Signal Over Noisy Channels,&rdquo; in IEEE Communications Letters, Nov. 2022, doi: 10.1109/LCOMM.2022.3200306.</li>
-</ol>
-</div>
-</div>
-<div id="outline-container-org2c0139a" class="outline-3">
-<h3 id="org2c0139a"><span class="section-number-3">5.2.</span> Conference Proceedings</h3>
-<div class="outline-text-3" id="text-5-2">
-<ol class="org-ol">
-<li>K. Elangovan, S. Saha and C. S. Anoop, &ldquo;A Simple Digital Interface Circuit for Giant Magneto-Resistance Sensors,&rdquo; IEEE TENCON 2019, doi: 10.1109/TENCON.2019.8929418.</li>
-</ol>
-</div>
-</div>
-</div>
-</div>
-<div id="postamble" class="status">
-<p class="author">Author: Subham Saha</p>
-<p class="date">Created: 2023-05-21 Sun 13:24</p>
-</div>
+<h1 id="research">Research</h1>
+<h2
+id="on-the-relationship-between-mean-absolute-error-and-age-of-incorrect-information-in-the-estimation-of-a-piecewise-linear-signal-over-noisy-channels">On
+the Relationship Between Mean Absolute Error and Age of Incorrect
+Information in the Estimation of a Piecewise Linear Signal Over Noisy
+Channels</h2>
+<p>We consider the remote estimation of a stochastic piecewise linear
+signal, observed by a sensor, at a monitor. The sensor transmits a
+packet whenever the observed signal’s slope changes. The packets are
+transmitted from the sensor to the monitor through an unreliable channel
+which randomly loses packets. The monitor sequentially estimates the
+signal using the information obtained from successfully received
+packets. The sensor does not have any feedback from the monitor. We
+derive an analytical expression for the average age of incorrect
+information, a recently proposed information freshness metric. The
+average age of incorrect information is shown to be a function of
+success probability of transmission and signal parameters representing
+the rate and clustering of slope changes. We obtain an upper bound on
+the mean absolute error of the remote estimate using the slope-weighted
+age of incorrect information. The age of incorrect information is also
+studied for a homogeneous multisensor scenario, where sensors use
+slotted ALOHA and the links between the sensors and the monitor are
+unreliable due to contention.</p>
+<h2
+id="on-the-minimum-average-age-of-information-in-irsa-for-grant-free-mmtc">On
+the Minimum Average Age of Information in IRSA for Grant-free mMTC</h2>
+<p>We consider the optimal design of the frame-based irregular
+repetition slotted ALOHA (IRSA) protocol for minimizing the average age
+of information (AAoI) in grant-free massive machine-type communications
+(mMTC). To this end, we first characterize the AAoI as a function of the
+number of UEs, the frame duration, and the repetition distribution of
+IRSA. We present this characterization for IRSA schemes with packet
+recovery at the end of frame and packet generation either at the
+beginning of the frame or just in time before first transmission in a
+frame. We also propose and characterize the AAoI of a novel early packet
+recovery method which further reduces the average age of information. In
+all cases, the analysis reveals that, as a function of normalized
+channel traffic (defined as the ratio of number of UEs to frame
+duration), the AAoI first decreases linearly due to more frequent
+updates received from the UEs, and increases sharply beyond a critical
+point due to packet recovery failures caused by collisions. We then
+consider the problem of minimizing AAoI by optimizing over the
+normalized channel traffic and repetition distribution for all the
+proposed sampling and recovery schemes. The optimization problem is
+challenging since the objective function is semi-analytical and can only
+be completely characterized using simulations. In an asymptotic regime
+where the number of UEs as well as the frame size is large, we
+characterize the AAoI using upper and lower bounds. We also obtain a
+locally optimal normalized channel traffic and repetition distribution
+using differential evolution. Based on the insights obtained from the
+asymptotic analysis, we also propose a pragmatic approach to obtain a
+normalized channel traffic and repetition distribution for AAoI
+reduction in the non-asymptotic case. Finally, we empirically show that
+our AAoI minimizing schemes outperform conventional throughput optimal
+schemes.</p>
+<h2
+id="a-simple-digital-interface-circuit-for-giant-magneto-resistance-sensors">A
+Simple Digital Interface Circuit for Giant Magneto-Resistance
+Sensors</h2>
+<p>Giant Magneto-Resistance (GMR) sensor-elements are usually configured
+in a Wheatstone bridge form. In this work, a new simple interface
+circuit with a microcontroller is proposed to identify the
+fractional-resistance change of GMR sensor using the discharge times of
+the capacitor. An Op-amp is used to avoid the effect of the mismatch of
+unshielded-resistance of the GMR sensor. This method just uses three
+conversion modes to make the output immune to the pin-resistance of the
+microcontroller. Simulation and emulation studies of the proposed
+interface are performed. A worst-case nonlinearity of 0.35% is observed.
+A hardware model of the interface is tested with the GMR sensor and the
+associated results are also reported in this paper.</p>
 </body>
 </html>
