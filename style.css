@@ -44,11 +44,6 @@ body {
 p {
 	font-family: serif;
 	line-height: 150%;
-	// overflow: hidden;
-	// text-overflow: ellipsis;
-	// display: -webkit-box;
-	// -webkit-line-clamp: 3;
-	// -webkit-box-orient: vertical;
 }
 
 #content > * {
@@ -262,8 +257,8 @@ footer {
 
 .profile {
   display: inline-block;
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
 	float: right;
 }
