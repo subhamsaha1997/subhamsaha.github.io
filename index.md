@@ -8,6 +8,8 @@ About
 ![](./profile.jpg){ .profile }
 Subham stumbled upon his interest in ECE serendipitously while studying Aerospace Engineering, realizing that the world of signals and communications held a greater fascination for him. He earned his B.Tech in ECE from the Indian Institute of Space Science and Technology. Currently, his research interests include wireless communication and networking systems. Subham's extensive prior experience includes designing multiple access schemes for massive MIMO communications applications and software development for embedded systems. Beyond academia, he describes himself as a fun-loving ambivert, occasionally indulging in playing the ukulele, singing, and socializing. He also plays badminton and table tennis at a level slightly beyond beginner. His love for the outdoors extends to treks, hikes, and activities like running and swimming.
 
+[LinkedIn](https://www.linkedin.com/in/subham-saha-iist2016) | subhamsaha0216 at gmail dot com
+
 Education
 =========
 - B.Tech, Electronics and Communication Engineering, Indian Institute of Space Science and Technology, 2020.
