@@ -1,0 +1,15 @@
+#set term qt persist
+#set term tikz
+#set terminal epslatex color
+#set output './los_continuous_data_rate.tex'
+set term svg enhanced
+set output "signal_power.svg"
+
+set grid
+set xlabel 'Frame Sequence Number'
+set ylabel 'Signal Power (dBm)'
+set xrange [0:3000]
+
+
+plot\
+'data.csv' using 1:2 title '' with linespoints, \
